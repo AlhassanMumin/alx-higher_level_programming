@@ -5,17 +5,16 @@
  * @list: the list to check
  * Return: 1 if list has a cycle or 0 if it doesnt hace a cycle
  */
-int check_cycle(listint_t *list)                                              
-{                                                                                                     
-	int ret;                   
+int check_cycle(listint_t *list)
+{
+	listint_t *slow = list, *fast = list;
 
-	while (list)                                                           
-	{                                                                     
-		if (list->n == 1)                                             
-			ret = 1;                                               
-		else if (list->n == 0)                                       
-			ret = 0;                                              
-		list = list->next;                                 
-	}                                                                                                 
-	return (ret);
+	while (slow != NULL && fast != NULL && fast->next != NULL)
+	{
+		slow = slow->next;
+		fast = fast->next->next;
+		if (slow == fast)
+			return (1);
+	}
+	return (0);
 }
