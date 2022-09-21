@@ -23,16 +23,18 @@ listint_t *insert_node(listint_t **head, int number)
 	}
 	else
 	{
-		while (cur->next)
+		while (cur->next != NULL)
 		{
-			if (cur->next->n == 4)
+			if (cur->n == 4)
 			{
-				temp->next = (cur->next)->next;
-				(cur->next)->next = temp;
-				break;
+				temp->next = cur->next;
+				cur->next = temp;
+				return (temp);
 			}
 			cur = cur->next;
 		}
 	}
+	temp->next = NULL;
+	cur->next = temp;
 	return (temp);
 }
