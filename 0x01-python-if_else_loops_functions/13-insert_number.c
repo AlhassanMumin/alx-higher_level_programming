@@ -16,15 +16,23 @@ listint_t *insert_node(listint_t **head, int number)
 	if (temp == NULL)
 		return (NULL);
 	temp->n = number;
-	while (cur->next)
+	if (*head == NULL)
 	{
-		if (cur->next->n == 98)
+		temp->next = *head;
+		*head = temp;
+	}
+	else
+	{
+		while (cur->next)
 		{
-			temp->next = cur->next;
-			cur->next = temp;
-			break;
+			if (cur->next->n == 4)
+			{
+				temp->next = (cur->next)->next;
+				(cur->next)->next = temp;
+				break;
+			}
+			cur = cur->next;
 		}
-		cur = cur->next;
 	}
 	return (temp);
 }
