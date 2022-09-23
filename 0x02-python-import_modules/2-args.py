@@ -1,10 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
+    """this function prints arguments"""
     import sys
-    """this function prints 
-    number of arguments of commandline
-    the arguments themselves
-    """
     
     if len(sys.argv) - 1 == 0:
         print("0 argument.")
