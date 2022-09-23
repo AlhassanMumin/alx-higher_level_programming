@@ -2,7 +2,7 @@
 if __name__ == "__main__":
     """this function prints arguments"""
     import sys
-    
+
     if len(sys.argv) - 1 == 0:
         print("0 argument.")
     elif len(sys.argv) - 1 == 1:
