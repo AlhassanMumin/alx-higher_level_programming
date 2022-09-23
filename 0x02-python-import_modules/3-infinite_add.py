@@ -4,7 +4,7 @@ if __name__ == "__main__":
     import sys
     
     result = 0
-    for ind, arg in enumerate(sys.argv):
+    for ind in range(len(sys.argv)):
         if ind >= 1:
-            result += int(arg)
+            result += int(sys.argv[ind])
     print("{}".format(result))
