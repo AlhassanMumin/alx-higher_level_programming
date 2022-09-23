@@ -13,4 +13,3 @@ if __name__ == "__main__":
     for ind in range(len(sys.argv)):
              if ind >= 1:
                  print("{}: {}".format(ind, sys.argv[ind]))
-
