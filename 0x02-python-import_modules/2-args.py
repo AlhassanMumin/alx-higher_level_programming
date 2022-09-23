@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-import sys
 if __name__ == "__main__":
+    import sys
     """this function prints 
     number of arguments of commandline
     the arguments themselves
     """
+    
     if len(sys.argv) - 1 == 0:
         print("0 argument.")
     elif len(sys.argv) - 1 == 1:
