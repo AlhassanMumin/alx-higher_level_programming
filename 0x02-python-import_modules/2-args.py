@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# 2-args.py
 if __name__ == "__main__":
     """this function prints arguments"""
     import sys
