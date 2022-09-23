@@ -8,4 +8,3 @@ if __name__ == "__main__":
         if ind >= 1:
             result += int(arg)
     print("{}".format(result))
-
