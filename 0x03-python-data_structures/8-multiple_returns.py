@@ -3,11 +3,10 @@
 
 def multiple_returns(sentence):
     """reurns a tuple """
-
-    if isinstance(sentence, str):
+        
         length = len(sentence)
         if length == 0:
-            tup = (None, 0)
+            tup = (0, None)
         else:
             tup = (length, sentence[0])
     return tup
