@@ -9,8 +9,8 @@ def print_matrix_integer(matrix=[[]]):
             row_len = len(row)
             for val in row:
                 if row.index(val) < row_len - 1:
-                    print("{} ".format(val), end="")
+                    print("{:d} ".format(val), end="")
                 else:
-                    print("{}".format(val))
+                    print("{:d}".format(val))
     else:
         print()
