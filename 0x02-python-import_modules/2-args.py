@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # 2-args.py
+
 if __name__ == "__main__":
     """this function prints arguments"""
     import sys
@@ -12,4 +13,4 @@ if __name__ == "__main__":
          print("{} arguments:".format(len(sys.argv) - 1))
     for ind in range(len(sys.argv)):
              if ind >= 1:
-                 print("{}: {}".format(ind, sys.argv[ind]))
+                 print("{:d}: {}".format(ind, sys.argv[ind]))
