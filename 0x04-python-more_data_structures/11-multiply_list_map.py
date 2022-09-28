@@ -6,4 +6,4 @@ def multiply_list_map(my_list=[], number=0):
 
     mult_by_4 = list(map(lambda val: val*4, my_list))
 
-    return mult_by_2
+    return mult_by_4
