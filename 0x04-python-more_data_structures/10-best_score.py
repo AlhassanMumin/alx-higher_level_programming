@@ -11,6 +11,8 @@ def best_score(a_dictionary):
     
     for key, val in a_dictionary.items():
         if val > a_dictionary.get(biggest_val):
-            biggest_val = key 
+            biggest_val = key
+        else:
+            biggest_val = None
     
     return biggest_val
