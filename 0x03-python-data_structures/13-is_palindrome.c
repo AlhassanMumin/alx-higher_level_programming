@@ -12,7 +12,7 @@ int is_palindrome(listint_t **head)
 	listint_t *tmp = *head;
 	
 	strlit = malloc(sizeof(listint_t));
-	if (strlit == NULL || *head == NULL)
+	if (strlit == NULL)
 		exit (1);
 
 
