@@ -13,7 +13,7 @@ int is_palindrome(listint_t **head)
 	
 	strlit = malloc(sizeof(listint_t));
 	if (strlit == NULL)
-		return (1);
+		exit (1);
 
 
 	while (tmp)
@@ -25,7 +25,7 @@ int is_palindrome(listint_t **head)
 	}
 	len_half = len / 2;
 	if (len == 0)
-		return (0);
+		return (1);
 
 	len -= 1;
 	for (i = 0; i < len_half; i++, len--)
