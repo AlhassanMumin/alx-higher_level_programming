@@ -5,8 +5,8 @@ def list_division(my_list_1, my_list_2, list_length):
     """divide element by element
 
     args:
-        my_list_1: the divident
-        my_list_2: the divisor
+        my_list_1 (list): the divident
+        my_list_2 (list): the divisor
         list_length: the length of the list to divide
 
     Return: the result in a new list
