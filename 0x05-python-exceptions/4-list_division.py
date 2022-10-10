@@ -12,21 +12,19 @@ def list_division(my_list_1, my_list_2, list_length):
     Return: the result in a new list
     """
     new_list = []
-    div = 0
 
     for idx in range(list_length):
         try:
             div = my_list_1[idx] / my_list_2[idx]
-            new_list.append(div)
         except IndexError:
-            new_list.append(0)
+            div = 0
             print("out of range")
         except (TypeError, ValueError):
-            new_list.append(0)
+            div = 0
             print("wrong type")
         except ZeroDivisionError:
-            new_list.append(0)
+            div = 0
             print("division by 9")
         finally:
-            print
+            new_list.append(div)
     return new_list
