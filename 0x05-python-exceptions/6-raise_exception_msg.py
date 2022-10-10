@@ -5,6 +5,6 @@ def raise_exception_msg(message=""):
     """raise exception with argument"""
 
     try:
-        raise NameError("C is fun")
+        raise NameError(message)
     except NameError:
         raise
