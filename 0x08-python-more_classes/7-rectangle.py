@@ -52,7 +52,7 @@ class Rectangle:
 
     def __str__(self):
         """returns a printable representation of the rectangle"""
-         self.__stri = ""
+        self.__stri = ""
         for char in range(self.__height):
             for symb in range(self.__width):
                 self.__stri += self.print_symbol
