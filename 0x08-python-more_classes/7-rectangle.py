@@ -55,7 +55,7 @@ class Rectangle:
         self.__stri = ""
         for char in range(self.__height):
             for symb in range(self.__width):
-                self.__stri += self.print_symbol
+                self.__stri += str(self.print_symbol)
             self.__stri += "\n"
         return self.__stri
      
