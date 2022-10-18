@@ -52,15 +52,12 @@ class Rectangle:
 
     def __str__(self):
         """returns a printable representation of the rectangle"""
-        if self.__width == 0 or self.__height == 0:
-            return ("")
-
-        rect = []
-        for i in range(self.__height):
-            [rect.append(str(self.print_symbol)) for j in range(self.__width)]
-            if i != self.__height - 1:
-                rect.append("\n")
-        return ("".join(rect))
+         self.__stri = ""
+        for char in range(self.__height):
+            for symb in range(self.__width):
+                self.__stri += self.print_symbol
+            self.__stri += "\n"
+        return self.__stri
      
     def __repr__(self):
         """returns a string representation of rectangle"""
