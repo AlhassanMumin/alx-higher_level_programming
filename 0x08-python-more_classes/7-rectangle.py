@@ -52,7 +52,7 @@ class Rectangle:
 
     def __str__(self):
         """returns a printable representation of the rectangle"""
-        s if self.__width == 0 or self.__height == 0:
+        if self.__width == 0 or self.__height == 0:
             return ("")
 
         rect = []
