@@ -1,0 +1,34 @@
+The ``4-print_square`` module
+=============================
+
+Using ''print_square''
+
+	>>> print_square = __import__('4-print_square').print_square
+
+# Default case size equal 4
+	>>> print_square(4)
+	####
+	####
+	####
+	####
+
+# Default case size equal 10
+	>>> print_square(10)
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+
+# Default case size equal 0
+	>>> print_square(0)
+	 
+
+# Default case size equal nothing
+	>>> print_square(1)
+	#

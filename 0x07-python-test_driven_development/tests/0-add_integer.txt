@@ -1,0 +1,43 @@
+The ''0-add_integer'' module
+----------------------------
+----------------------------
+
+using ''add_integer''
+--------------------------
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+	
+# All positive integer case
+	>>> add_integer(1, 2)
+	3
+
+# A positive and negative integer case
+	>>> add_integer(100, -2)
+	98
+
+# Only a value given test case
+	>>> add_integer(2)
+	100
+
+# A float and a negative integer test case
+	>>> add_integer(100.3, -2)
+	98
+
+# An iteger and a string test case
+	>>> add_integer(4, "School")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+# A None value test case
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+# An infinitely large value test case
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+# A zero test case
+	>>> add_integer(0)
+	98
