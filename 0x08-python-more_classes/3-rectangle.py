@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # 3-rectangle.py
-
+"""represent the rectangle class"""
 
 class Rectangle:
     """Represent a rectangle."""
@@ -37,19 +37,22 @@ class Rectangle:
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("height must be >= 0") 
+            raise ValueError("height must be >= 0")
         self.__height = value
 
     def area(self):
+        """calculate the area of a rectangle"""
         return self.__width * self.__height
 
     def perimeter(self):
+        """calculate the perimeter of a rectangle"""
         if self.__width == 0 or self.__height == 0:
             return 0
         else:
             return 2*(self.__width + self.__height)
 
     def __str__(self):
+        """returns a printable representation a rectangle"""
         self.__stri = ""
         for char in range(self.__height):
             for symb in range(self.__width):
