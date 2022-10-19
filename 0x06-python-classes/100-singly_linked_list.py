@@ -12,7 +12,7 @@ class Node:
             data (int): The data of the new Node.
             next_node (Node): The next node of the new Node.
         """
-    
+
 
         self.data = data
         self.next_node = next_node
@@ -48,7 +48,7 @@ class SinglyLinkedList:
         """Initalize a new SinglyLinkedList."""
 
         self.__head = None
-    
+
     def sorted_insert(self, value):
         """Insert a new Node to the SinglyLinkedList.
 
