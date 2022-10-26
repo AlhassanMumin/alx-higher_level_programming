@@ -8,17 +8,16 @@ class BaseGeometry:
         """Defines an area that raises an exception with a message"""
         raise Exception("area() is not implemented")
     def integer_validator(self, name, value):
-        if type(name) != int:
-            raise TypeError("width must be an integer")
         if type(value) != int:
-            raise TypeError("height must be an integer")
-        self.__value = abs(value)
+            raise TypeError("{} must be an integer".format(name))
+        if value <= 0:
+            raise ValueError("{} must be greater than 0".format(name))
+        self.__value = value
 
-"""Defines a Rectangle class"""
 
 class Rectangle(BaseGeometry):
-    """call BaseGeometry through constructor"""
     def __init__(self, width, height):
+        self.integer_validator('width', width)
         self.__width = width
+        self.integer_validator('height', height)
         self.__height = height
-        BaseGeometry.integer_validator(self, width, height)
