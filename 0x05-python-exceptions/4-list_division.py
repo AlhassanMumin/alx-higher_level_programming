@@ -24,7 +24,7 @@ def list_division(my_list_1, my_list_2, list_length):
             print("wrong type")
         except ZeroDivisionError:
             div = 0
-            print("division by 9")
+            print("division by 0")
         finally:
             new_list.append(div)
     return new_list
