@@ -10,7 +10,7 @@ if __name__ == "__main__":
     elif len(sys.argv) - 1 == 1:
         print("1 argument:")
     else:
-         print("{} arguments:".format(len(sys.argv) - 1))
+        print("{} arguments:".format(len(sys.argv) - 1))
     for ind in range(len(sys.argv)):
-             if ind >= 1:
-                 print("{:d}: {}".format(ind, sys.argv[ind]))
+        if ind >= 1:
+            print("{:d}: {}".format(ind, sys.argv[ind]))
