@@ -18,3 +18,4 @@ def safe_function(fct, *args):
         return fct(args[0], args[1])
     except (ZeroDivisionError, IndexError):
         print("Exception: {}".format(sys.exc_info()[1]), file=sys.stderr)
+        return None
