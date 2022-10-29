@@ -15,7 +15,7 @@ def safe_function(fct, *args):
             the returned value on success
     """
     try:
-        return fct(args[0], args[1])
+        return fct(*args)
     except (ZeroDivisionError, IndexError):
         print("Exception: {}".format(sys.exc_info()[1]), file=sys.stderr)
         return None
