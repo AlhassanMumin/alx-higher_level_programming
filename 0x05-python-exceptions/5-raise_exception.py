@@ -3,8 +3,4 @@
 
 def raise_exception():
     """raise exception"""
-
-    try:
-        raise TypeError
-    except TypeError:
-        raise
+    raise TypeError
