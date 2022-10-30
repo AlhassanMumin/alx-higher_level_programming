@@ -54,3 +54,7 @@ Using ''print_sorted'' function
 	>>> my_list.append(-5)
 	>>> my_list.print_sorted()
 	[-inf, -8, -5, -3, -1]
+
+# trying with a non integer
+	>>> my_list = MyList()
+	>>> my_list.append(True)
