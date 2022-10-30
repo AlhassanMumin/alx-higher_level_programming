@@ -8,4 +8,8 @@ class MyList(list):
 
     def print_sorted(self):
         """returns a sorted list"""
-        print(sorted(self))
+        my_list = []
+        for idx in range(len(self)):
+            my_list.append(list.__getitem__(self, idx))
+        my_list.sort()
+        print(my_list)
