@@ -2,6 +2,7 @@
 # 5-base_geometry.py
 """Defines a classGeometry with a public area instance"""
 
+
 class BaseGeometry:
     """Definition of  class BaseGeometry"""
     def area(self):
