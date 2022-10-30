@@ -2,6 +2,7 @@
 # 4-inherits_from.py
 """Defines a function with a class and object"""
 
+
 def inherits_from(obj, a_class):
     """Checks if an object is an inherited instance of a class.
 
