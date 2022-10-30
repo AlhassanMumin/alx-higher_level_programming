@@ -10,6 +10,6 @@ class MyList(list):
         """returns a sorted list"""
         my_list = []
         for idx in range(len(self)):
-            my_list.append(list.__getitem__(self, idx))
+            my_list.append(self.__getitem__(idx))
         my_list.sort()
         print(my_list)
