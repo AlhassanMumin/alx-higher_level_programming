@@ -89,14 +89,16 @@ class Rectangle(Base):
 
     def display(self):
         """Display a rectangle with a '#'"""
-        for bredth in range(self.__height):
-            for depth in range(self.__width):
+        if self.height == 0 or self.width == 0:
+            print("")
+        for bredth in range(self.height):
+            for depth in range(self.width):
                 print("#", end="")
             print()
 
     def __str__(self):
         return "[Rectangle] ({})  {}/{} - {}/{}".format(
-                self.id, self.__x, self.__y, self.__width, self.__height)
+                self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args):
         """updates the instance attributes
