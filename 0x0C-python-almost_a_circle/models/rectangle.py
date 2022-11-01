@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 # rectangle.py
 """the definition of the rectangle class"""
-
 from models.base import Base
 
 
@@ -9,6 +8,7 @@ class Rectangle(Base):
     """the rectangle lass"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """the constructor"""
         self.width = width
         self.height = height
         self.x = x
