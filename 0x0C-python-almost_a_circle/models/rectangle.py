@@ -91,6 +91,8 @@ class Rectangle(Base):
         """Display a rectangle with a '#'"""
         if self.height == 0 or self.width == 0:
             print("")
+            return
+
         for bredth in range(self.height):
             for depth in range(self.width):
                 print("#", end="")
@@ -117,10 +119,10 @@ class Rectangle(Base):
         elif len(args) == 1:
             self.id = args[0]
         elif len(args) == 2:
-            self.id, self.__width = args
+            self.id, self.width = args
         elif len(args) == 3:
-            self.id, self.__width, self.__height = args
+            self.id, self.width, self.height = args
         elif len(args) == 4:
-            self.id, self.__width, self.__height, self.__x = args
+            self.id, self.width, self.height, self.x = args
         else:
-            self.id, self.__width, self.__height, self.__x, self.__y = args
+            self.id, self.width, self.height, self.x, self.y = args
