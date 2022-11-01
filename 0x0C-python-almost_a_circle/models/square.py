@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+# square.py
 """square module"""
 from models.rectangle import Rectangle
+
 
 class Square(Rectangle):
     """Represent a square."""
@@ -12,12 +14,10 @@ class Square(Rectangle):
             x (int): The x coordinate of the new Square.
             y (int): The y coordinate of the new Square.
             id (int): The identity of the new Square.
-        """        
+        """
         Rectangle.__init__(self, size, size, x, y, id)
 
     def __str__(self):
         """the magic str method"""
         return "[Square] ({}) {}/{} - {}".format(
                 self.id, self.x, self.y, self.width)
-
-
