@@ -5,7 +5,7 @@ import unittest
 from models.base import Base
 
 
-class TestBaseClass(unittest.TestCase):
+class TestBaseClassForInstances(unittest.TestCase):
     """The test case class"""
 
     def test_Noneinstance(self):
@@ -51,3 +51,39 @@ class TestBaseClass(unittest.TestCase):
     def test_assign_class_private_Attri(self):
         with self.assertRaises(AttributeError):
             b_p_attr = Base(100).__nb_objects
+
+    def test_float(self):
+        self.assertEqual(3.4, Base(3.4).id)
+
+    def test_boolean(self):
+        self.assertEqual(True, Base(True).id)
+
+    def test_dictionary(self):
+        self.assertEqual({'1':1, '2':2}, Base({'1':1, '2':2}).id)
+
+    def test_list(self):
+        self.assertEqual([1, 2, 3], Base([1, 2, 3]).id)
+
+    def test_tuple(self):
+        self.assertEqual((1, 4), Base((1, 4)).id)
+
+    def test_bytes(self):
+        self.assertEqual(bytes(3), Base(b'\x00\x00\x00').id)
+    
+    def test_byteArray(self):
+        self.assertEqual(bytearray(3), Base((b'\x00\x00\x00')).id)
+
+    def test_memoryview(self):
+        self.assertEqual(memoryview(b"ALX SE"), Base(memoryview(b"ALX SE")).id)
+
+    def test_more_than_1arg(self):
+        with self.assertRaises(TypeError):
+            self.assertEqual(Base(1, 2).id, all(1, 2))
+
+    def test_infinite(self):
+        self.assertEqual(Base(float('inf')).id, float('inf'))
+
+    def test_NaN(self):
+        self.assertNotEqual(Base(float('nan')).id, float('nan'))
+
+
