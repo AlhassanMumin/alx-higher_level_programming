@@ -8,7 +8,19 @@ class Rectangle(Base):
     """the rectangle lass"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """the constructor"""
+        """the constructor
+         Args:
+            width (int): The width of the new Rectangle.
+            height (int): The height of the new Rectangle.
+            x (int): The x coordinate of the new Rectangle.
+            y (int): The y coordinate of the new Rectangle.
+            id (int): The identity of the new Rectangle.
+        Raises:
+            TypeError: If either of width or height is not an int.
+            ValueError: If either of width or height <= 0.
+            TypeError: If either of x or y is not an int.
+            ValueError: If either of x or y < 0
+        """
         self.width = width
         self.height = height
         self.x = x
@@ -83,7 +95,17 @@ class Rectangle(Base):
                 self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args):
-        """updates the instance attributes"""
+        """updates the instance attributes
+
+        Args:
+            *args (ints): New attribute values.
+            - 1st argument represents id attribute
+            - 2nd argument represents width attribute
+            - 3rd argument represent height attribute
+            - 4th argument represents x attribute
+            - 5th argument represents y attribute
+            **kwargs (dict): New key/value pairs of attributes.
+        """
         if len(args) == 0:
             pass
         elif len(args) == 1:
