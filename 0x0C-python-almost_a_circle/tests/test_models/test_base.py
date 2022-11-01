@@ -4,7 +4,10 @@ import unittest
 
 from models.base import Base
 
+
 class TestBaseClass(unittest.TestCase):
+    """The test case class"""
+
     def test_Noneinstance(self):
         # testing normal instance of the Base
         b1 = Base()
@@ -15,7 +18,7 @@ class TestBaseClass(unittest.TestCase):
         b1 = Base()
         b2 = Base()
         self.assertEqual(b2.id, 3)
-    
+
     def test_with_value_instance(self):
         # Passing a positive integer as a value
         b3 = Base(12)
@@ -23,6 +26,7 @@ class TestBaseClass(unittest.TestCase):
 
     def test_passNone(self):
         # Passing a None as argument
+
         b4 = Base(None)
         self.assertEqual(b4.id, 4)
 
@@ -34,14 +38,14 @@ class TestBaseClass(unittest.TestCase):
     def test_string(self):
         bs1 = Base("Hello World")
         self.assertEqual(bs1.id, "Hello World")
-    
+
     def test_set_string(self):
         bs1 = Base()
         bs1.id = "ALX SE"
         self.assertEqual(bs1.id, "ALX SE")
-    
+
     def test_complex_number(self):
-        b_complex = Base(complex(2,2))
+        b_complex = Base(complex(2, 2))
         self.assertEqual(b_complex.id, 2 + 2j)
 
     def test_assign_class_private_Attri(self):
