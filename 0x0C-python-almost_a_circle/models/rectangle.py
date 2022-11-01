@@ -1,20 +1,24 @@
 #!/usr/bin/python3
 # rectangle.py
+"""the definition of the rectangle class"""
+
 from models.base import Base
 
 
 class Rectangle(Base):
+    """the rectangle lass"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
         self.height = height
         self.x = x
         self.y = y
         Base.__init__(self, id)
-    
-    
+
     @property
     def width(self):
         return self.__width
+
     @width.setter
     def width(self, value):
         """setter mehto"""
@@ -23,10 +27,11 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("{} must be > 0".format('width'))
         self.__width = value
-    
+
     @property
     def height(self):
         return self.__height
+
     @height.setter
     def height(self, value):
         """get and set method for height"""
@@ -35,10 +40,11 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("{} must be > 0".format('height'))
         self.__height = value
-    
+
     @property
     def x(self):
         return self.__x
+
     @x.setter
     def x(self, value):
         """get/set methods for x"""
@@ -51,6 +57,7 @@ class Rectangle(Base):
     @property
     def y(self):
         return self.__y
+
     @y.setter
     def y(self, value):
         """get/set methond"""
@@ -66,15 +73,14 @@ class Rectangle(Base):
 
     def display(self):
         """Display a rectangle with a '#'"""
-        for bredth in  range(self.__height):
+        for bredth in range(self.__height):
             for depth in range(self.__width):
                 print("#", end="")
             print()
 
     def __str__(self):
-        return "[Rectangle] ({})  {}/{} - {}/{}".format(self.id, self.__x, self.__y, \
-                self.__width, self.__height)
-
+        return "[Rectangle] ({})  {}/{} - {}/{}".format(
+                self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args):
         """updates the instance attributes"""
@@ -90,19 +96,3 @@ class Rectangle(Base):
             self.id, self.__width, self.__height, self.__x = args
         else:
             self.id, self.__width, self.__height, self.__x, self.__y = args
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
