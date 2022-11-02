@@ -65,5 +65,3 @@ class Square(Rectangle):
             self.id, self.size, self.x, self.y = args
         else:
             pass
-           # self.id, self.width, self.height, self.x, self.y = args
-
