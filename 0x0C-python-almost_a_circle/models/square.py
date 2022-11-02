@@ -32,3 +32,38 @@ class Square(Rectangle):
         """the magic str method"""
         return "[Square] ({}) {}/{} - {}".format(
                 self.id, self.x, self.y, self.width)
+    
+    def update(self, *args, **kwargs):
+        """updates the instance attributes
+
+        Args:
+            *args (ints): New attribute values.
+            - 1st argument represents id attribute
+            - 2nd argument represents width attribute
+            - 3rd argument represent height attribute
+            - 4th argument represents x attribute
+            - 5th argument represents y attribute
+            **kwargs (dict): New key/value pairs of attributes.
+        """
+        if len(args) == 0:
+            for key, value in kwargs.items():
+                if key == 'x':
+                    self.x = value
+                if key == 'y':
+                    self.y = value
+                if key == 'size':
+                    self.size = value
+                if key == 'id':
+                    self.id = value
+        elif len(args) == 1:
+            self.id = args[0]
+        elif len(args) == 2:
+            self.id, self.size = args
+        elif len(args) == 3:
+            self.id, self.size, self.x = args
+        elif len(args) == 4:
+            self.id, self.size, self.x, self.y = args
+        else:
+            pass
+           # self.id, self.width, self.height, self.x, self.y = args
+
