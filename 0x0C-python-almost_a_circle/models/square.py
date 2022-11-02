@@ -32,7 +32,7 @@ class Square(Rectangle):
         """the magic str method"""
         return "[Square] ({}) {}/{} - {}".format(
                 self.id, self.x, self.y, self.width)
-    
+
     def update(self, *args, **kwargs):
         """updates the instance attributes
 
