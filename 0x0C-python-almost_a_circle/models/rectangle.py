@@ -117,7 +117,7 @@ class Rectangle(Base):
             **kwargs (dict): New key/value pairs of attributes.
         """
         if len(args) == 0:
-            for  key, value in kwargs.items():
+            for key, value in kwargs.items():
                 if key == 'height':
                     self.height = value
                 if key == 'width':
