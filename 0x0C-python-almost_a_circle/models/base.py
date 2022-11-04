@@ -52,7 +52,7 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """the json or dict representation"""
-        if json_string is None:
+        if json_string is None or json_string == []:
             return "[]"
         if isinstance(json_string, dict):
             return json.dumps(json_string)
