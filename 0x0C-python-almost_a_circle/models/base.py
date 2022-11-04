@@ -53,7 +53,7 @@ class Base:
     def from_json_string(json_string):
         """the json or dict representation"""
         if json_string is None or json_string == []:
-            return "[]"
+            return []
         if isinstance(json_string, dict):
             return json.dumps(json_string)
         return json.loads(json_string)
