@@ -47,4 +47,13 @@ class Base:
                 jf.write("[]")
             else:
                 dict_list = [o.to_dictionary() for o in list_objs]
-                jf.write(Base.to_json_string(dict_list))
+                jf.write(cls.to_json_string(dict_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """the json or dict representation"""
+        if json_string is None:
+            return "[]"
+        if isinstance(json_string, dict):
+            return json.dumps(json_string)
+        return json.loads(json_string)
