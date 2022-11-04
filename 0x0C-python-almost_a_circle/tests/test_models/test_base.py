@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Define test base case"""
+"""Define unittest for base.py module
+Unittest classes:
+    TestBaseClassForInstances - line 10
+"""    
 import unittest
 from models.base import Base
 
