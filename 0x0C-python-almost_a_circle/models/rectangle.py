@@ -49,7 +49,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """get and set method for height"""
-        if not isinstance(value, int):
+        if type(value) != int:
             raise TypeError("{} must be an integer".format('height'))
         if value <= 0:
             raise ValueError("{} must be > 0".format('height'))
