@@ -66,7 +66,7 @@ class Rectangle(Base):
         if type(value) != int:
             raise TypeError("{} must be an integer".format('x'))
         if value < 0:
-            raise ValueError("{} must be > 0".format('x'))
+            raise ValueError("{} must be >= 0".format('x'))
         self.__x = value
 
     @property
@@ -80,7 +80,7 @@ class Rectangle(Base):
         if not isinstance(value, int):
             raise TypeError("{} must be an integer".format('y'))
         if value < 0:
-            raise ValueError("{} must be > 0".format('y'))
+            raise ValueError("{} must be >= 0".format('y'))
         self.__y = value
 
     def area(self):
