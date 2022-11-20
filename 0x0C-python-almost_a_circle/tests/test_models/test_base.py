@@ -18,7 +18,7 @@ class TestBaseClassForInstances(unittest.TestCase):
     def test_no_argument(self):
         b1 = Base()
         b2 = Base()
-        self.assertEqual(b2.id, 3)
+        self.assertEqual(b2.id, b1.id + 1)
 
     def test_with_value_instance(self):
         b3 = Base(12)
@@ -26,7 +26,7 @@ class TestBaseClassForInstances(unittest.TestCase):
 
     def test_passNone(self):
         b4 = Base(None)
-        self.assertEqual(b4.id, 4)
+        self.assertEqual(b4.id - 1, b3.id)
 
     def test_set_avalue(self):
         b = Base()

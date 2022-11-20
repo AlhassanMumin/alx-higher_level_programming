@@ -89,6 +89,7 @@ class TestRectangle_Instance(unittest.TestCase):
 
         self.assertEqual(" ###\n ###\n", capture.getvalue())
 
-
+f __name__ == '__main__':
+    unittest.main()
 
 
