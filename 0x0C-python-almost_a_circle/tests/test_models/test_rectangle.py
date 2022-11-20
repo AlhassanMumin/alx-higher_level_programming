@@ -42,7 +42,7 @@ class TestRectangle_Instance(unittest.TestCase):
             r.width = -10
 
     def test_pass_negative_y(self):
-        with self.assertRaisesRegex(ValueError, 'y must be > 0'):
+        with self.assertRaisesRegex(ValueError, 'y must be >= 0'):
             Rectangle(10, 2, 3, -1)
 
     def test_set_x_as_dictionary(self):
