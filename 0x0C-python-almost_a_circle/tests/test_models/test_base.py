@@ -84,5 +84,5 @@ class TestBaseClassForInstances(unittest.TestCase):
     def test_NaN(self):
         self.assertNotEqual(Base(float('nan')).id, float('nan'))
 
-    if __name__ == '__main__':
-        unittest.main()
+if __name__ == '__main__':
+    unittest.main()
