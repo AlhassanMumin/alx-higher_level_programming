@@ -1,3 +1,3 @@
 -- compute average
-select avg(second_table.score) as average
-from second_table
+SELECT AVG(second_table.score) as average
+FROM second_table
