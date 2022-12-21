@@ -9,7 +9,7 @@ else if (size > 0)
 {
 	while (size--)
 	{
-		arr.push('x');
+		arr.push('X');
 	}
 	let str = arr.join('');
 	for (let i = 0; i < process.argv[2]; i++)
