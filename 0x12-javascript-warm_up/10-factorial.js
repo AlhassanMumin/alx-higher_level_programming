@@ -1,5 +1,5 @@
 #!/usr/bin/node
-let val = process.argv[2];
+const val = process.argv[2];
 function factoria(val)
 {
 	if (val === 1 || isNaN(val))
