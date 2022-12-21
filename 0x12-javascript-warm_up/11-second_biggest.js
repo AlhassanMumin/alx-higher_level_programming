@@ -1,15 +1,16 @@
 #!/usr/bin/node
-let arr = [];
-let size = process.argv;
+const arr = new Array();
+let size = process.argv.length, tmp;
 if (size === 3 || isNaN(process.argv[2]))
 {
 	console.log(0);
 	return;
 }
-
-for (let i = 2; i < size; i++)
+for(let i = 2; i < process.argv.length; ++i) 
 {
-	arr.push(parseInt(process.argv[i]));
+	tmp = parseInt(process.argv[i]);
+	arr.push(tmp);
 }
 arr.sort();
-console.log(arr[1]);
+console.log(arr);
+console.log(arr[size - 4]);
