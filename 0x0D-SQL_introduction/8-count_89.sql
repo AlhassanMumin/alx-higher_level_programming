@@ -1,3 +1,3 @@
 -- count the fields
-SELECT COUNT(id)
+SELECT COUNT(id = 89)
 FROM first_table
