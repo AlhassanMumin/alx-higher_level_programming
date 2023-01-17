@@ -1,3 +1,3 @@
 #!/bin/bash
 # all http methods allowed
-curl -s "$1" -X OPTIONS
+curl -siX OPTIONS "$1"
