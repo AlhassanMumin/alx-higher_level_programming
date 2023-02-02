@@ -12,6 +12,4 @@ def complex_delete(a_dictionary, value):
             if val is value:
                 del a_dictionary[key]
                 break
-    return a_dictionary 
-
-
+    return a_dictionary
