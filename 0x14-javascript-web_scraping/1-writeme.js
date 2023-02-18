@@ -7,5 +7,5 @@ fs.writeFile(args[0], args[1], (err) => {
     console.error(err);
     return;
   }
-  console.log();
+  console.log('');
 });
