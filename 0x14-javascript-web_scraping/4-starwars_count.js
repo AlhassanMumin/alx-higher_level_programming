@@ -5,7 +5,7 @@ request(apiUrl, (error, response, body) => {
   if (error) {
     console.error('Error:', error);
   } else {
-    const films = JSON.parse(body)['results'];
+    const films = JSON.parse(body).results;
     let numMoviesWithWedge = 0;
 
     films.forEach((film) => {
