@@ -2,10 +2,7 @@
 const request = require('request');
 const apiURL = process.argv[2];
 request(apiURL, (error, response, body) => {
-  if (error) {
-    console.error(error);
-    return;
-  }
+  if (error) console.error(error);
 const todos = JSON.parse(body);
 const completedTasksByUserId = new Map();
 for (const todo of todos) {
