@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  $('header').addClass('red');
 $('DIV#toggle_header').click(function(){
 if ($('header').hasClass('red')){
   $('header').removeClass('red');
